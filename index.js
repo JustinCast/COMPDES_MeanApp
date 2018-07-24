@@ -9,7 +9,7 @@ const app = express();
 const api = require('./server/routes/api');
 
 function DBConnection() {
-    const MONGO_URI = 'mongodb:// justin1524:gears1524@ds145871.mlab.com:45871/meanapp_compdes'
+    const MONGO_URI = 'mongodb://compdes:compdes123@ds147391.mlab.com:47391/meanapp_compdes'
     mongoose.connect(process.env.MONGODB_URI || MONGO_URI, (err, res) => {
         if(err){
             console.log(err)

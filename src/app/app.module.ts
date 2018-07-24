@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatButtonModule } from "@angular/material";
 
 import { AppComponent } from './app.component';
 import { ShowNotesComponent } from './show-notes/show-notes.component';
@@ -17,7 +18,8 @@ import { ROUTES } from './app.routing';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

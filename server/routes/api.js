@@ -5,4 +5,5 @@ const NoteCTRL = require('./NoteRouter')
 
 module.exports = api
 
-api.get('getNotes', NoteCTRL.getNotes)
+api.get('/getNotes', NoteCTRL.getNotes)
+api.post('/saveNote', NoteCTRL.saveNote)

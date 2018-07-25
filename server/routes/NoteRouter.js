@@ -17,6 +17,7 @@ function getNotes(req, res) {
 
 function saveNote(req, res) {
     let note = new Note(req.body)
+    console.log(req.body)
     note.save((err, noteStored) => {
         if(err) res.status(500).send({message: `Error al guardar la nota: ${err}`})
         else

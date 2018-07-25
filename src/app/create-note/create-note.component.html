@@ -1,13 +1,13 @@
-<form style="margin-top: 3%" class="container text-center" [formGroup]="createGroup" (ngSubmit)="onSubmit">
+<form style="margin-top: 3%" class="container text-center" [formGroup]="createGroup" (ngSubmit)="onSubmit()">
   <h1 class="text-secondary text-center">Create a note</h1>
   <mat-form-field>
-    <input [formControl]="createGroup.get('title')" matInput placeholder="Title">
+    <input [(ngModel)]="note.Title" [formControl]="createGroup.get('title')" matInput placeholder="Title">
   </mat-form-field>
   <mat-form-field>
-    <input [formControl]="createGroup.get('description')" matInput placeholder="Description">
+    <input [(ngModel)]="note.Description" [formControl]="createGroup.get('description')" matInput placeholder="Description">
   </mat-form-field>
   <mat-form-field>
-    <input matInput [formControl]="createGroup.get('assignmentDate')" [matDatepicker]="picker" placeholder="Assignment Date">
+    <input [(ngModel)]="note.AssignmentDate" matInput [formControl]="createGroup.get('assignmentDate')" [matDatepicker]="picker" placeholder="Assignment Date">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>

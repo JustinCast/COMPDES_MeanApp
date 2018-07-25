@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '../../../node_modules/@angular/forms';
 import { NoteService } from '../note.service';
+import { Note } from '../models/Note';
 
 @Component({
   selector: 'app-create-note',
@@ -9,6 +10,7 @@ import { NoteService } from '../note.service';
 })
 export class CreateNoteComponent implements OnInit {
   createGroup: FormGroup;
+  note: Note = new Note('', '', new Date())
   constructor(
     private _fb: FormBuilder,
     private noteService: NoteService
@@ -24,7 +26,7 @@ export class CreateNoteComponent implements OnInit {
   }
 
   onSubmit() {
-
+    this.noteService.saveNote(this.note)
   }
 
 }

@@ -12,12 +12,10 @@ const NoteSchema = new Schema({
         required: true
     },
     CreationDate: {
-        type: Date,
-        required: true
+        type: Date
     },
     AssignedDate: {
-        type: Date,
-        required: true
+        type: Date
     }
 })
 

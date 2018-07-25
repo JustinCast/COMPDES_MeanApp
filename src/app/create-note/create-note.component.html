@@ -3,6 +3,14 @@
   <mat-form-field>
     <input [formControl]="createGroup.get('title')" matInput placeholder="Title">
   </mat-form-field>
+  <mat-form-field>
+    <input [formControl]="createGroup.get('description')" matInput placeholder="Description">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [formControl]="createGroup.get('assignmentDate')" [matDatepicker]="picker" placeholder="Assignment Date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
   <div class="text-center">
     <button mat-raised-button color="primary" [disabled]="!createGroup.valid" type="submit"><i class="material-icons">send</i></button>
   </div>

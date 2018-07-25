@@ -4,7 +4,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { 
   MatButtonModule ,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatDatepickerModule,
+  MatNativeDateModule
 } from "@angular/material";
 
 import { AppComponent } from './app.component';
@@ -28,7 +30,9 @@ import { ROUTES } from './app.routing';
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

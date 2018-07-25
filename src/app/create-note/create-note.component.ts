@@ -16,7 +16,6 @@ export class CreateNoteComponent implements OnInit {
     this.createGroup = this._fb.group({
       'title': ['', Validators.required],
       'description': ['', Validators.required],
-      'creationDate': ['', Validators.required],
       'assignmentDate': ['', Validators.required]
     })
   }

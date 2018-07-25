@@ -1,6 +1,6 @@
 <h1 style="margin-top: 2%" class="text-primary text-center">Compdes MEAN APP</h1>
 <div id="header" class="container text-center">
-  <button style="margin-right: 1%" mat-raised-button color="primary">Show Notes</button>
-  <button style="margin-left: 1%" mat-raised-button color="accent">Create Note</button>
+  <button [routerLink]="['/show']" style="margin-right: 1%" mat-raised-button color="primary">Show Notes</button>
+  <button [routerLink]="['/create']" style="margin-left: 1%" mat-raised-button color="accent">Create Note</button>
 </div>
-<app-show-notes></app-show-notes>
+<router-outlet></router-outlet>

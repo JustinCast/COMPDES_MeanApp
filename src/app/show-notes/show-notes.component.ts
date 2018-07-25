@@ -6,10 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./show-notes.component.css']
 })
 export class ShowNotesComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
   }
-
 }

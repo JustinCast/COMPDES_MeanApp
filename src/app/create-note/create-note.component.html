@@ -1,3 +1,9 @@
-<p>
-  create-note works!
-</p>
+<form style="margin-top: 3%" class="container text-center" [formGroup]="createGroup" (ngSubmit)="onSubmit">
+  <h1 class="text-secondary text-center">Create a note</h1>
+  <mat-form-field>
+    <input [formControl]="createGroup.get('title')" matInput placeholder="Title">
+  </mat-form-field>
+  <div class="text-center">
+    <button mat-raised-button color="primary" [disabled]="!createGroup.valid" type="submit"><i class="material-icons">send</i></button>
+  </div>
+</form>
